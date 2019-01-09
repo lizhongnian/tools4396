@@ -5,6 +5,10 @@ red="\033[31m"
 green='\033[32m'
 yellow='\033[33m'
 none='\033[0m'
+#${red}
+#${green}
+#${yellow}
+#${none}
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
@@ -27,6 +31,7 @@ get_uuid(){
 #获取本机ip
 get_ip() {
 	ip=$(curl -s https://ipinfo.io/ip)
+	echo -e " ${green}信息${none}：获取到的本机ip为$ip";
 }
 #检查系统
 check_sys(){
@@ -44,6 +49,7 @@ check_sys(){
 		release="ubuntu"
 	elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
 		release="centos"
+	echo -e " ${green}信息${none}：检测到的操作系统类型为$release";
     fi
 }
 #检查Linux版本
@@ -58,6 +64,7 @@ check_version(){
 		bit="x64"
 	else
 		bit="x32"
+	echo -e " ${green}信息${none}：检测到的linux版本为$bit";
 	fi
 }
 #菜单
@@ -133,8 +140,8 @@ esac
 #stty erase '^H' && read -p "请输入宝塔面板添加的网站域名,请不要修改添加之后的默认地址（例如:www.baidu.com，不带http/https）：" website
 #echo -e "${green} 请确认您输入的网站域名：${none} $website"
 #[[ -z $is_path ]] && is_path="n"
-
 check_root
+get_ip
 check_sys
 check_version
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${red} 本脚本不支持当前系统 ${release} !" && exit 1
