@@ -1,12 +1,10 @@
 #!/bin/bash
 ## 一键脚本合集
 #定义颜色
-red='\e[91m'
-green='\e[92m'
-yellow='\e[93m'
-magenta='\e[95m'
-cyan='\e[96m'
-none='\e[0m'
+red="\033[31m"
+green='\033[32m'
+yellow='\033[33m'
+none='\033[0m'
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
