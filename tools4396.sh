@@ -6,7 +6,7 @@ green='\033[32m'
 yellow='\033[33m'
 none='\033[0m'
 #版本
-tool_version='0.0.1'
+tool_version='0.0.2'
 #${red}
 #${green}
 #${yellow}
