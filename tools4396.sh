@@ -23,7 +23,7 @@ echo ""
 #检查是否root用户
 check_root(){
 	[ $(id -u) != "0" ] && {
-		echo -e " ${red}Error ${none}：必须使用root用户执行此脚本！"; exit 1; 
+		echo -e " ${red}错误${none}：必须使用root用户执行此脚本！"; exit 1; 
 	}
 }
 #获取uuid
@@ -51,8 +51,8 @@ check_sys(){
 		release="ubuntu"
 	elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
 		release="centos"
-	echo -e " ${green}信息${none}：检测到的操作系统类型为$release";
     fi
+	echo -e " ${green}信息${none}：检测到的操作系统类型为$release";
 }
 #检查Linux版本
 check_version(){
@@ -66,8 +66,8 @@ check_version(){
 		bit="x64"
 	else
 		bit="x32"
-	echo -e " ${green}信息${none}：检测到的linux版本为$bit";
 	fi
+	echo -e " ${green}信息${none}：检测到的linux版本为$bit";
 }
 #菜单
 start_menu(){
@@ -147,4 +147,4 @@ get_ip
 check_sys
 check_version
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${red} 本脚本不支持当前系统 ${release} !" && exit 1
-start_menu
+#start_menu
