@@ -10,16 +10,16 @@ none='\e[0m'
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
-echo "  ${green}Install${none}：欢迎使用tools4396工具 "
-echo "  ${green}Author${none}: 7colorblog"
-echo "  ${green}URL${none}: https://www.7colorblog.com"
-echo "  ${green}Article${none}: https://www.7colorblog.com/?id=64"
+echo -e "  ${green}Install${none}：欢迎使用tools4396工具 "
+echo -e "  ${green}Author${none}: 7colorblog"
+echo -e "  ${green}URL${none}: https://www.7colorblog.com"
+echo -e "  ${green}Article${none}: https://www.7colorblog.com/?id=64"
 echo "---------------------------------------------"
 echo ""
 #检查是否root用户
 check_root(){
 	[ $(id -u) != "0" ] && {
-		echo -e " ${red} Error {none}：必须使用root用户执行此脚本！"; exit 1; 
+		echo -e " ${red}Error ${none}：必须使用root用户执行此脚本！"; exit 1; 
 	}
 }
 #获取uuid
