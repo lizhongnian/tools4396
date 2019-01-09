@@ -1,10 +1,12 @@
 #!/bin/bash
 ## 一键脚本合集
 #定义颜色
-red="\033[31m"
+red='\033[31m'
 green='\033[32m'
 yellow='\033[33m'
 none='\033[0m'
+#版本
+tool_version='0.0.1'
 #${red}
 #${green}
 #${yellow}
@@ -12,7 +14,7 @@ none='\033[0m'
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
-echo -e "  ${green}Install${none}：欢迎使用tools4396工具 "
+echo -e "  ${green}Install${none}：欢迎使用tools4396工具 v$tool_version"
 echo -e "  ${green}Author${none}: 7colorblog"
 echo -e "  ${green}URL${none}: https://www.7colorblog.com"
 echo -e "  ${green}Article${none}: https://www.7colorblog.com/?id=64"
